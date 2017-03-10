@@ -1,0 +1,128 @@
+@import 'functions.scss';
+
+/* this for right-top links which is inside the nav */
+nav{ 
+	overflow: hidden;
+  margin: 10px 0 0 1rem;
+	ul{
+		list-style-type: none;
+		li {
+			display: inline-block;
+			font-size: 2rem;
+			a{
+				text-decoration: none;
+				padding: 8px 7px 9px 7px;
+				margin-left: 9px;
+				font-size: .9375rem;
+			  border-radius: 0.3rem;	
+			}
+		}
+	} 
+}
+.body_style{
+	color: get-color(font-color);
+	background-color: get-color(content-background-color);
+}
+/* logo class */
+.logo{
+	background: url('https://a.slack-edge.com/5eb00/img/landing/where_work_happens/logo-dark-blue@2x.png') left top no-repeat;
+	background-size: 106px 30px;
+	height: 30px;
+  width: 106px;
+  float: left;
+}
+
+.align-right-ul{
+	float: right;
+	margin: 0px 20px 0.65% 0px;
+	padding: 0 ;
+}
+
+/* this for style contents */
+.main-content{
+	margin: 10%;
+	width: 40%;
+}
+
+.where-work-happens{
+	font-size: 3rem;
+	font-weight: 900;
+  line-height: 1;
+  @include long-shadow(1,1,get-color(text-shadow-color),500);
+}
+.no-wrap{
+	white-space: nowrap;
+}
+
+.asterisk{
+  color: transparent;
+	background: url('https://a.slack-edge.com/cbe6f/img/landing/where_work_happens/asterisk@2x.png') no-repeat;
+	background-position: center center;
+	background-size: contain;
+	text-shadow: none;
+}
+
+nav ul li a:hover{
+	background-color: get-color(hover-color);
+}
+
+.border-link{
+	@include box-shadow(0,0,0,2px,get-color(font-color),true); 
+}
+.border-link:hover{
+	background: 0 0;
+	@include box-shadow(0,0,0,2px,black,true); 
+}
+
+.input-email{
+	outline: none;//disable the
+	border: 1px;
+	padding: 13px 14px 13px 14px;
+	border-radius: 4px;	
+	margin-right: 0.5rem;
+	@include box-shadow(0,0,3px,1px,get-color(input-border-color),true);
+	width: 45%;
+	font-size: 1.02rem;
+	border: 1px solid get-color(input-border-color);
+
+}
+.input-email:focus{
+	border: 1px solid get-color(input-focus-border-color);
+}
+
+.button-green{
+	background-color: get-color(button-color);
+	color: white;
+	outline: none;
+	border: 1px solid get-color(input-border-color);
+	padding: 13px 14px 13px 14px;
+	border-radius: 4px;	
+	@include box-shadow(0,3px,10px,0,get-color(input-border-color));
+	font-size: 1.02rem;
+	&:hover{
+		background-color: get-color(button-hover-color);
+		@include box-shadow(0,3px,10px,0,get-color(input-border-color));
+		font-size: 1.02rem;
+	}
+}
+
+.note{
+	margin-top: 1%;
+	font-size: 0.79rem;
+	color: get-color(note-color);
+}
+.decribtion{
+	font-size: 1.2rem;
+	width: 110%;
+}
+
+.img-left{
+	// float: right;
+	background-image: url(https://a.slack-edge.com/5eb00/img/landing/where_work_happens/illustration_wall@2x.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 550px;
+	width: 595.4px;
+	float: right; 
+	margin-right: 2%;
+}

@@ -1,0 +1,74 @@
+@import 'functions.scss';
+$forntFamily: Slack-Lato,sans-serif;
+$fontSize: 14px;
+
+body {
+	font-family: $forntFamily;
+	line-height: 1.8*$fontSize;
+  outline: none;
+  margin: 0px; 
+}
+
+
+p {
+	sup{
+	color: get-color(star-color);
+	font-size: 3rem;
+	vertical-align: bottom;
+	// position: center center;
+	}
+}
+
+a{
+	color: get-color(link-color);
+}
+
+li {
+	list-style-type: none;
+	a{
+	text-decoration: none;
+
+	}
+}
+
+.footer{
+	padding-top: 2%; 
+	background-color: white; 
+	position: relative;
+	overflow: hidden;
+	font-size: 0.82rem;
+	color: #8c8c94;
+}
+
+#using-slack-list-tittle{
+	color: get-color(footer-using-slack-color);
+}
+#slack-list-tittle{
+	color: get-color(footer-slack-color);
+}
+#leagl-list-tittle{
+	color: get-color(footer-leagl-color);
+}
+#handy-links-list-tittle{
+	color: get-color(footer-handing-link-color);
+}
+
+.footer-lists{
+	float: left;
+  margin-left: 10%;
+  color: get-color(footer-list-font-color);
+}
+
+.buttom-logo{
+ opacity: 0.51;
+ margin-top: .5%;
+ margin-bottom: .5%;
+ margin-left: 5%;
+}
+
+.contact-us-style{
+	float: right;
+	margin-right: 5%;
+  padding-top: 0.6%;
+	position: center;
+}

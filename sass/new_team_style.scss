@@ -1,0 +1,44 @@
+.logo{
+	background: url('https://a.slack-edge.com/66f9/img/landing/header_logo_sprite@2x.png') left top no-repeat;
+	background-size: 106px 60px;
+	height: 30px;
+  width: 106px;
+  background-position: left bottom;
+  float: left;
+  padding-right: 1rem;
+}    
+.container{
+	display: -webkit-inline-box;
+	font-weight: 100;
+	overflow: hidden;
+}
+.margin_style{
+	margin: 15px;
+}
+.form{
+	background-color: white;
+	height: 100vw;
+	width: 33vw;
+}
+.create_new{
+	margin :13rem 2rem;
+}
+.right_img{
+	background-color: #21B2FE;
+	height: 100vw;
+    width: 67vw;
+}
+
+.your_email{
+	border: 1px solid #E3E3E3;
+    padding: 20px 20px 20px 20px;
+    font-size: 17.1px;
+    border-radius: 8px;
+    width: 60%;
+}
+input{
+	outline: none;
+}
+h1{
+	font-weight: 100;
+}

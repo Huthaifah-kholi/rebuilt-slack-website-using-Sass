@@ -1,0 +1,554 @@
+@import 'functions.scss';
+@import 'pricing_color.scss';
+
+$forntFamily: Slack-Lato,sans-serif;
+$fontSize: 14px;
+/* this for right-top links which is inside the nav */
+body{
+	background-color: white;
+}
+button{
+	outline: none;
+}
+nav	ul{
+	list-style-type: none;
+	li {
+		display: inline-block;
+		font-size: 2rem;
+		a{
+			text-decoration: none;
+			padding: 8px 7px 9px 7px;
+			margin-left: 9px;
+			font-size: .9375rem;
+		  border-radius: 0.3rem;	
+		}
+	}
+}
+.gray_background{
+	background-color: map-get($pricing-colors,'background-color');
+}
+.nav{
+	position: fixed;
+	width: 100%;
+	overflow: hidden;
+	background-color: white;
+	z-index: 99;
+	color: map-get($pricing-colors,'nav-font-color');
+	@include box-shadow(0,1px,1px,0px,map-get($pricing-colors,'nav-box-shadow-color'));
+// 0 1px 1px rgba(0,0,0,.1);
+}
+/* logo class */
+.logo{
+	background: url('https://a.slack-edge.com/66f9/img/landing/header_logo_sprite@2x.png') left top no-repeat;
+	background-size: 106px 60px;
+	height: 30px;
+  width: 106px;
+  background-position: left bottom;
+  float: left;
+	margin: 2% 0 0 1.5%;
+}
+
+.align-right-ul{
+	float: right;
+	margin: 1.5% 20px 0px 0;
+	padding-bottom: 1.5% ;
+}
+
+
+nav ul li a:hover{
+	background-color: map-get($pricing-colors,'nav-background-hover-color');
+	color: map-get($pricing-colors,'nav-font-hover-color');
+}
+
+.border-link{
+	@include box-shadow(0,0,0,2px,map-get($pricing-colors,'nav-font-color'),true); 
+	&:hover{
+		background: 0 0;
+		// color: get-map($pricing-colors,'nav-font-hover-color');
+		color: get-map($pricing-colors,black);
+		@include box-shadow(0,0,0,2px,black,true); 
+	}
+}
+
+.tittle{
+	font-size: 2.3rem;
+	text-align: center;
+	padding:9% 3% 3%;
+}
+.button-div{
+	@include box-shadow(0,6px,0,0, map-get($pricing-colors,'tab_button-shadow-color'));
+}
+.pricing_tabs{
+	margin: 0px 20% 0px 20%;
+	text-align: center;
+}
+.pricing_tabs_buttons{
+	border: 0px;
+	margin: 0px;
+	box-shadow: 0px -8px 0px 0px map-get($pricing-colors,'tab_button-shadow-color');
+  padding: 1.2%;
+  font-size: 1.09rem;
+  font-weight: bold;
+  background-color: map-get($pricing-colors,'tab_button-background-color');
+	width: 50%;
+
+}
+.pricing_tabs_buttons_active{
+	border: 0px;
+	margin: 0px;
+  padding: 1.2%;
+  font-size: 1.09rem;
+  font-weight: bold;
+	width: 50%;
+	box-shadow: 0px -8px 0px 0px map-get($pricing-colors,'tab_button-active-shadow-color');
+	background-color: map-get($pricing-colors,'tab_button-active-background-color');
+}
+.pricing_tabs_buttons:hover{
+	box-shadow: 0px -8px 0px 0px map-get($pricing-colors,'tab_button-hover-shadow-color');
+	background-color: map-get($pricing-colors,'tab_button-hover-background-color');
+}
+
+.tabs_container{
+
+	padding: 3rem 0 0 0;
+	box-shadow: 0 1px 30px map-get($pricing-colors, 'tab_container_shadow-color');
+	background-color: map-get($pricing-colors,'nav-background-color');
+	border-radius: 0px 0px 10px 10px;
+}
+.tabs_container_content{
+	font-size: 1.3rem;
+	padding-bottom: 8rem; 
+}
+
+.cards{
+	display: flex;
+  justify-content: center;
+}
+.cards_price{
+	font-size: 5.5rem;
+  font-weight: 800;
+  letter-spacing: -10px;
+  margin-right: 2rem;
+}
+.currancy{
+  font-size: 2rem;
+  font-weight: normal;
+  position: relative;
+  top: -1.75rem;
+  color: map-get($pricing-colors,'currancy-color');
+}
+.pricing_detials{
+	font-size: 0.7rem;
+	line-height: 0.8rem;
+	color: map-get($pricing-colors,'pricing-details-font-color');
+}
+.cards_tittle{
+	padding: 1rem;
+}
+.card_column{
+	padding: 0 1rem 0 1rem;
+	padding-bottom: 8rem;
+}
+.blue_button{
+	background-color: map-get($pricing-colors,'background-button-color');
+	color: white;
+	outline: none;
+	border: 0;
+	padding: 13px 14px 13px 14px;
+	border-radius: 4px;	
+	font-size: 1.02rem;
+	width: 100%;
+	&:hover{
+		@include box-shadow(0,-3px,1px,0,map-get($pricing-colors,'button-box-shadow-color'),true);
+	}
+}
+.white_button{
+	background-color: white;
+  margin-top: 14%;
+	color: green;
+	outline: none;
+	border: 0;
+	padding: 13px 14px 13px 14px;
+	border-radius: 4px;	
+	font-size: 1.02rem;
+
+	// width: 100%;
+}
+.circle_list{
+    display: table-cell;
+	& li{
+		list-style-type: circle;
+		text-align: left;
+	}
+}
+hr{
+
+}
+.img_style{
+  width: 71%;
+  height: 43%;
+  margin-bottom: 5%;   
+	float: left;
+  margin-left: 12%;
+  margin-right: 8%;
+}
+#right_specification{
+  margin-right: 4rem;
+}
+#specification{
+  padding-right: 7rem;
+}
+.width_70{
+  width: 70%;
+}.width_80{
+  width: 80%;
+}
+.width_30{
+  width: 30%;
+}
+.width_100{
+	width: 100%;
+}
+.security_style{
+	padding: 5% 0 5% 0;
+}
+.companies_logo{
+	padding: 0 5% 0 5%;
+  margin: 3%;
+
+	& div div{
+    margin: 2%;
+		background-image: url(https://a.slack-edge.com/bfaba/img/pricing/logo_csa@2x.png);
+	  background-position: top center;
+	  background-repeat: no-repeat;
+	  background-size: contain;
+		padding-top: 90px;
+		margin-bottom: 2rem;
+		width: 8.5rem;
+		line-height: 0.4rem;
+		& h4{
+			font-size: 0.7rem;
+		}
+		& p{
+			font-size: 0.3rem;
+		}
+	}
+}
+.in_line{
+	display: -webkit-inline-box;
+	text-align: center;
+}
+.slack_free{
+	padding: 5% 18% 5% 18%;
+	display: -webkit-box;
+	background-color: map-get($pricing-colors,'background-button-color');
+	color: map-get($pricing-colors,'nav-background-color');
+	& h3{
+			width: 55%;
+	    margin-right: 15%;
+			font-weight: 100;
+	}	
+}
+
+.father_div_slider{
+	overflow: hidden;
+	position: relative;
+	width: 100vw;
+	height: 400px;
+	background-color: white;
+}
+.slider_div{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: 0;
+	display:flex;
+	margin: 5%;
+	& h1{
+		margin: 5%;
+		text-align: center;
+	}
+} 
+.above_slider{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: 0;
+  background: radial-gradient(circle,rgba(0, 0, 0, 0) 51%,white 82%);
+  opacity: 0.7;
+	top: 0;
+  left: 0;
+
+}
+.slider{
+    border: #2b3645;
+    border-style: solid;
+    border-color: darkgray;
+    border-width: thin;
+    width: 400px;
+    height: 250px;
+}
+.slider_content{
+	margin: 30px;
+}
+blockquote.twitter-tweet {
+  display: inline-block;
+  font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  border-color: #eee #ddd #bbb;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  margin: 10px 5px;
+  padding: 0 16px 16px 16px;
+  min-width: 468px;
+  max-height: 64%;
+}
+
+blockquote.twitter-tweet p {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+blockquote.twitter-tweet a {
+  color: inherit;
+  font-weight: normal;
+  text-decoration: none;
+  outline: 0 none;
+}
+
+blockquote.twitter-tweet a:hover,
+blockquote.twitter-tweet a:focus {
+  text-decoration: underline;
+}
+.arrows{
+	margin:14% 0% 0% 24% ;
+	font-size: -webkit-xxx-large;
+}
+.left_arrow{
+	text-decoration: none;
+}
+
+.right_arrow{
+	text-decoration: none;
+	margin-left: 65%;
+}
+.radius{
+	margin-top: 15px;
+	border-radius: 50%;
+}
+
+.customers{
+	opacity: 0.56;
+	width: 793px;
+	height: 425px;
+	background-image: url('https://a.slack-edge.com/bf38/img/customer-logos/retina/black/logos-black@2x.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	// background-clip: 
+	margin: auto;
+  background-position-y: 50px;
+	& h1{
+		text-align: center;
+	}
+}
+.green_background{
+	background-color: #42c299;
+	color: white;
+	padding: 3rem 0px 0px 3rem ;
+	font-size: 1.3rem;
+	font-weight: 100;
+	& div {
+		background-image: url('https://a.slack-edge.com/bfaba/img/survey/survey_chat@2x.png');
+		background-repeat: no-repeat;
+		background-position: right center;
+		background-size: 24rem;
+		margin-right: 3%;
+		padding: 4rem 24rem 4rem 10rem;
+		& span{
+			color: yellow;
+		}
+
+	}
+}
+
+.see_data_btn{
+	    color: white;
+    padding: 0.7rem;
+    background-color: #42c299;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 6px;
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+ 
+.out_pricing_perspective{
+	background-color: #6a4ca6;
+	padding: 3rem 7rem;
+		& div{
+		color: white;
+    background-image: url(https://a.slack-edge.com/66f9/img/pricing/purple_rocket@2x.png);
+    background-repeat: no-repeat;
+    background-size: 21rem;
+    background-position: left;
+    padding-left: 25rem;
+    font-weight: 100;
+
+		}
+}
+
+.fair_billing_policy{
+	background-color: white;
+	padding: 3rem 7rem;
+		& div{
+    background-image: url(https://a.slack-edge.com/d0b9/img/pricing/invoice@2x.png);
+    background-repeat: no-repeat;
+    background-size: 19rem;
+    background-position: right;
+    padding-right: 32rem;
+    font-weight: 100;
+
+		}
+}
+.nonprofit_pricing{
+  padding: 9rem 0;
+  background-color: #f9b644;
+  font-size: 1.25rem;
+  & div{
+    background-image: url(https://a.slack-edge.com/b9ff/img/pricing/nonprofit_ribbon@2x.png);
+    background-repeat: no-repeat;
+    background-size: 19rem;
+    background-position: left;
+    padding-left: 23rem;
+    font-weight: 100;
+    padding-right: 10rem;
+    margin-left: 7rem;
+    & div{
+    background-image: url(https://a.slack-edge.com/97d7c/img/pricing/slack_for_good_logos@2x.png);
+    background-repeat: no-repeat;
+    background-size: 39rem;
+    background-position: bottom;
+    width: 100%;
+    height: 8rem;
+    padding: 0;
+    margin: 0;
+    }
+  	& h1{
+  		color: white;
+  	}
+  }
+}
+.take_to_human{
+  padding: 9rem 0;
+  background-color: #f9f9f9;
+  font-size: 1.25rem;
+  & div{
+    background-image: url(https://a.slack-edge.com/b9ff/img/pricing/life_preserver@2x.png);
+    background-repeat: no-repeat;
+    background-size: 14rem;
+    background-position: right;
+    padding-right: 23rem;
+    font-weight: 100;
+    padding-left: 10rem;
+    margin-right: 7rem;
+  }
+}
+.common_questions{
+	background-color: white;
+	width: 100%;
+  display: inline-block;
+  margin-top: 7rem;
+      position: relative;
+    overflow: scroll;
+}
+#nav{
+	padding-left: 8rem;
+	float: left;
+	width: 14%;
+	margin :26rem 0rem 2rem 0rem;
+	position: sticky;
+	top:100px;
+	bottom:100px;
+	h1{
+		font-weight: 900;
+	}
+  ul {
+		-webkit-padding-start: 0px;
+  	li {
+		  // margin: 0.5rem;
+			a{
+				font-weight: 100;
+				color: #5d5d5d;
+				padding: 0.9rem 0.9rem 0.9rem 0.3rem;
+				display: block;
+				transition: padding-left .2s ease-out;
+		    margin-bottom: 0.3rem;
+        border-radius: 0.3rem;
+				&:hover{
+					background-color: #e4f2fb;
+					padding-left: 1.4rem;
+					
+				}
+				&:active{
+					background-color: #3aa3e3;
+					padding-left: 1.4rem;
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+#content{
+  width: 70%;
+	float: right;
+	height: 800px;
+	// padding-left: 0.4rem;
+	>h1{
+    font-size: 3rem;
+    width: 70%;
+    text-align: center;
+    line-height: 3.3rem;
+	}
+	li{
+		    display: inline-block;
+	}
+}
+.ul_style{
+	    -webkit-padding-start: 0px;
+}
+
+.rigth_align{
+	float: right;
+}
+.margin_top{
+padding-top: 6.25rem;
+line-height: 3;
+}
+.back_button{
+	    width: 100%;
+    text-align: center;
+    padding: 3rem;
+    a{
+    				text-decoration: none;
+
+    	    padding: 1rem 2rem;
+    background-color: #e0e0e0;
+    color: #45a1e0;
+    font-size: 2rem;
+    font-weight: 200;
+    border: 0px;
+    &:hover{
+    	@include box-shadow(0,-3px,1px,0,map-get($pricing-colors,'button-box-shadow-color'),true);
+    }
+    }
+}

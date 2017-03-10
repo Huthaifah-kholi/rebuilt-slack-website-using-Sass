@@ -1,0 +1,55 @@
+body {
+  font-family: Slack-Lato, sans-serif;
+  line-height: 25.2px;
+  outline: none;
+  margin: 0px; }
+
+p sup {
+  color: #e32072;
+  font-size: 3rem;
+  vertical-align: bottom; }
+
+a {
+  color: #9e9ea6; }
+
+li {
+  list-style-type: none; }
+  li a {
+    text-decoration: none; }
+
+.footer {
+  padding-top: 2%;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  font-size: 0.82rem;
+  color: #8c8c94; }
+
+#using-slack-list-tittle {
+  color: #edb431; }
+
+#slack-list-tittle {
+  color: #e32072; }
+
+#leagl-list-tittle {
+  color: #2ab27b; }
+
+#handy-links-list-tittle {
+  color: #4b6bc6; }
+
+.footer-lists {
+  float: left;
+  margin-left: 10%;
+  color: #8c8c94; }
+
+.buttom-logo {
+  opacity: 0.51;
+  margin-top: .5%;
+  margin-bottom: .5%;
+  margin-left: 5%; }
+
+.contact-us-style {
+  float: right;
+  margin-right: 5%;
+  padding-top: 0.6%;
+  position: center; }

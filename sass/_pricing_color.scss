@@ -1,0 +1,30 @@
+// @function get-color($key) {
+//   @if map-has-key($pricing-colors, $key) {
+//     @return map-get($pricing-colors, $key);
+//   }
+
+//   @warn "Unknown `#{$key}` in $pricing-colors.";
+//   @return null;
+// }
+
+
+$pricing-colors:(
+	nav-font-color:#666f77,
+	nav-background-hover-color:#ebebeb,
+	nav-font-hover-color:#404b55,
+	nav-box-shadow-color: rgba(0,0,0,.1),
+	background-color:#f9f9f9, 
+	tittle-color: #2b3645,
+	tab_button-background-color:#dee1e9,
+	tab_button-hover-background-color:#edeff3,
+	tab_button-shadow-color:#a6aeb8,
+	tab_button-hover-shadow-color:#c2c8cf,
+	tab_button-active-shadow-color:#f6b63f,
+	tab_button-active-background-color:white,
+	tab_container_shadow-color:rgba(0,0,0,.1),
+	currancy-color:darkgray,
+	pricing-details-font-color: #393b42,
+	background-button-color : #45a1e0,
+	button-border-color:initial,
+	button-box-shadow-color:rgba(0,0,0,.25)
+);
